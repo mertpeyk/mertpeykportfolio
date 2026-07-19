@@ -100,17 +100,13 @@
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.portrait-fallback {
-  display: grid;
-  place-items: center;
+.portrait-image {
   width: 88px;
   height: 88px;
   border-radius: 24px;
-  background: rgba(7, 12, 24, 0.72);
-  color: #fff5eb;
-  font-family: var(--display);
-  font-size: 1.9rem;
-  font-weight: 700;
+  object-fit: cover;
+  object-position: center 18%;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.28);
 }
 
 .portrait-copy strong {
@@ -620,11 +616,10 @@
     border-radius: 22px;
   }
 
-  .portrait-fallback {
+  .portrait-image {
     width: 68px;
     height: 68px;
     border-radius: 18px;
-    font-size: 1.5rem;
   }
 }
 

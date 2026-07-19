@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import profilePhoto from './assets/hakki-mert-peyk.jpg'
 import './App.css'
 
 type Locale = 'tr' | 'en'
@@ -80,8 +81,8 @@ const uiCopy = {
     liveSite: 'Canlı Site',
     toggleTr: 'TR',
     toggleEn: 'EN',
-    photoNote: 'Profil fotoğrafı alanı hazır',
-    photoHint: 'Gerçek fotoğrafını gönder, bunu doğrudan portreyle değiştireyim.',
+    photoNote: 'Hakkı Mert Peyk',
+    photoHint: 'Yazılım mühendisi, ürün odaklı geliştirici ve operasyonel sistem kurucusu.',
   },
   en: {
     eyebrow: 'HAKKI MERT PEYK • SOFTWARE ENGINEER',
@@ -123,8 +124,8 @@ const uiCopy = {
     liveSite: 'Live Site',
     toggleTr: 'TR',
     toggleEn: 'EN',
-    photoNote: 'Profile photo slot is ready',
-    photoHint: 'Send me your actual photo and I will replace this area with a real portrait.',
+    photoNote: 'Hakkı Mert Peyk',
+    photoHint: 'Software engineer focused on products, execution, and operational systems.',
   },
 } as const
 
@@ -431,7 +432,7 @@ function App() {
         <div className="hero-card">
           <div className="portrait-shell">
             <div className="portrait-ring">
-              <div className="portrait-fallback">MP</div>
+              <img src={profilePhoto} alt="Portrait of Hakkı Mert Peyk" className="portrait-image" />
             </div>
             <div className="portrait-copy">
               <strong>{copy.photoNote}</strong>
