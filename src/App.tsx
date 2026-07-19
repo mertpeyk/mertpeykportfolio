@@ -1,96 +1,151 @@
 import './App.css'
 
+type CapabilityGroup = {
+  title: string
+  items: string[]
+}
+
+type Experience = {
+  company: string
+  role: string
+  period: string
+  summary: string
+}
+
 type Project = {
   title: string
   category: string
+  role: string
   summary: string
   impact: string
   stack: string[]
-  status: string
 }
 
-const capabilityGroups = [
+type Education = {
+  school: string
+  degree: string
+  period: string
+}
+
+const capabilityGroups: CapabilityGroup[] = [
   {
-    title: 'Product Engineering',
-    items: ['React & Next.js interfaces', 'Flutter mobile apps', 'Design systems that stay shippable'],
+    title: 'Full Stack Delivery',
+    items: ['Next.js, React, TypeScript', 'FastAPI, Node.js, REST APIs', 'MySQL, PostgreSQL, SQL modeling'],
   },
   {
-    title: 'Backend Systems',
-    items: ['Node.js APIs', 'PostgreSQL & Prisma', 'Auth, admin, catalog, and messaging flows'],
+    title: 'Mobile Products',
+    items: ['Flutter for iOS and Android', 'Release workflows and store readiness', 'Analytics, monetization, and product iteration'],
   },
   {
-    title: 'Delivery Mindset',
-    items: ['Fast iteration', 'Readable codebases', 'Polish that survives real usage'],
+    title: 'Systems Thinking',
+    items: ['ERP and MES product design', 'RBAC, JWT, multi-tenant structures', 'Agile delivery and practical architecture'],
   },
 ]
 
-const projects: Project[] = [
+const experience: Experience[] = [
   {
-    title: 'OtoTeklifim',
-    category: 'Marketplace Platform',
+    company: 'CodeThinx',
+    role: 'Software Engineer',
+    period: 'Dec 2024 — Present',
     summary:
-      'End-to-end automotive marketplace with mobile client, admin surface, listings, offers, favorites, and messaging.',
-    impact:
-      'Connected the mobile flow to a real Node.js + PostgreSQL backend and aligned catalog, auth, and listing routes with production-style data.',
-    stack: ['Flutter', 'Node.js', 'PostgreSQL', 'Prisma', 'Fastify'],
-    status: 'Private case study',
+      'Building custom business software, ERP-oriented systems, operational dashboards, and digital transformation products for SMEs.',
   },
   {
-    title: 'FinalWhistles',
-    category: 'Mobile Product',
+    company: 'Figen Egitim Kurumlari',
+    role: 'Bilisim Uzmani',
+    period: 'Apr 2026 — Present',
     summary:
-      'Football prediction app focused on content delivery, premium access, notifications, and admin publishing workflows.',
-    impact:
-      'Built for fast editorial updates with Supabase-backed auth and a separate admin publishing surface.',
-    stack: ['Flutter', 'Supabase', 'Firebase', 'Vercel'],
-    status: 'Private repository',
+      'Supporting institutional technology operations while continuing product and engineering work in parallel.',
   },
   {
-    title: 'Altinweb Ecosystem',
-    category: 'Finance Experience',
+    company: 'ADL Kurumsal Hizmetler',
+    role: 'Software Engineer',
+    period: 'Jun 2024 — Nov 2024',
     summary:
-      'A connected set of mobile and web products around market tracking, dashboard workflows, and admin operations.',
+      'Worked across frontend and backend delivery for digital products and internal business solutions.',
+  },
+]
+
+const featuredProjects: Project[] = [
+  {
+    title: 'CodeThinx ERP & MES',
+    category: 'Industrial SaaS Platform',
+    role: 'Founder & Lead Software Engineer',
+    summary:
+      'A scalable platform for finance, operations, production planning, machine monitoring, and shift management.',
     impact:
-      'Split into dedicated frontend, backend, and mobile surfaces to keep customer-facing speed and internal operations clean.',
-    stack: ['Flutter', 'Next.js', 'Node.js', 'REST APIs'],
-    status: 'Private multi-repo system',
+      'Designed around multi-tenant thinking, role-based access, real-time monitoring, and operational visibility for production environments.',
+    stack: ['Next.js', 'React', 'TypeScript', 'FastAPI', 'MySQL'],
   },
   {
-    title: 'CamAvrupa',
-    category: 'CMS Website',
+    title: 'AltinWeb',
+    category: 'Market Data SaaS',
+    role: 'Founder & Full Stack Engineer',
     summary:
-      'Corporate website with a structured content layer, reusable sections, and a presentation that feels modern without being generic.',
+      'Live gold and exchange management platform tailored for the jewelry sector with operational modules and screen-based experiences.',
     impact:
-      'Set up around Next.js and Sanity to make content updates practical without sacrificing layout quality.',
-    stack: ['Next.js', 'Sanity', 'SCSS'],
-    status: 'Private repository',
+      'Connected SOAP and REST market feeds with high-frequency price workflows, stock logic, smart pricing, and admin control surfaces.',
+    stack: ['Next.js', 'React', 'FastAPI', 'Python', 'MySQL', 'SOAP/REST'],
   },
   {
-    title: 'Sahibinden Arac Takip',
-    category: 'Utility App',
+    title: 'Misil Bebek',
+    category: 'Consumer Mobile App',
+    role: 'Founder & Mobile Engineer',
     summary:
-      'Vehicle tracking workflow for monitoring listings and surfacing useful data instead of forcing manual checking.',
+      'Sleep support app for parents with white noise, lullabies, multilingual UX, and production release management.',
     impact:
-      'Combined a simple frontend with persistence so the product could move beyond a throwaway script into a usable tool.',
-    stack: ['Next.js', 'Prisma', 'PostgreSQL'],
-    status: 'Private repository',
+      'Handled multilingual product flow, monetization tuning, ASO thinking, and release operations for a consumer-facing app.',
+    stack: ['Flutter', 'Dart', 'Firebase Analytics', 'AdMob'],
   },
   {
-    title: 'AffectEd',
-    category: 'Concept to Execution',
+    title: 'Sigarayi Birakiyoruz',
+    category: 'Behavior Change Product',
+    role: 'Founder & Full Stack Mobile Developer',
     summary:
-      'A product concept shaped with technical framing, narrative clarity, and implementation thinking instead of staying at idea level.',
+      'A mobile experience built to support smoking cessation with motivation, crisis support, and progress tracking flows.',
     impact:
-      'An example of turning a raw concept into a structured digital product direction with technical detail.',
-    stack: ['Product Strategy', 'Frontend Prototyping', 'Technical Writing'],
-    status: 'Project archive',
+      'Focused on product stability, store compliance, multilingual content, and a user journey shaped around repeat engagement.',
+    stack: ['Flutter', 'Dart', 'Firebase', 'AdMob'],
+  },
+  {
+    title: 'AKKANA',
+    category: 'Autonomous Marine Project',
+    role: 'Project Lead & Software Engineer',
+    summary:
+      'Sonar-based unmanned marine vehicle project developed through university and incubation support.',
+    impact:
+      'Reached prototype phase under team leadership and earned second place at Ostim Technical University Pitching Day.',
+    stack: ['Product Leadership', 'Embedded Collaboration', 'Prototyping'],
+  },
+  {
+    title: 'Cancer Tissue Detection from MR Images',
+    category: 'Graduation Research Project',
+    role: 'Researcher & Software Developer',
+    summary:
+      'Deep learning-based medical imaging project focused on cancerous tissue detection from MR scans.',
+    impact:
+      'Built with TensorFlow and VGG16-style CNN methods, targeting high diagnostic accuracy in an academic context.',
+    stack: ['Python', 'TensorFlow', 'Computer Vision', 'CNN'],
+  },
+]
+
+const education: Education[] = [
+  {
+    school: 'Ostim Teknik Universitesi',
+    degree: 'MSc in Software Engineering',
+    period: 'Oct 2025 — Present',
+  },
+  {
+    school: 'Ostim Teknik Universitesi',
+    degree: 'BSc in Software Engineering',
+    period: 'Oct 2020 — Jun 2024',
   },
 ]
 
 const principles = [
-  'I like products that feel finished, not just functional.',
-  'I care about shipping speed, but not at the cost of maintainability.',
-  'I usually work across UI, API, data, and deployment until the whole flow actually works.',
+  'I like products that solve operational problems, not just UI exercises.',
+  'I enjoy moving between product thinking, interface quality, and backend structure without breaking continuity.',
+  'I prefer systems that stay readable as they grow: naming, boundaries, and delivery discipline matter.',
 ]
 
 function App() {
@@ -98,27 +153,23 @@ function App() {
     <main className="page-shell">
       <section className="hero-panel">
         <div className="hero-copy">
-          <p className="eyebrow">MERT PEYK • SOFTWARE ENGINEER</p>
+          <p className="eyebrow">HAKKI MERT PEYK • SOFTWARE ENGINEER</p>
           <h1>
-            Building products that look sharp,
-            <span> move fast, and hold together under real use.</span>
+            Building software across
+            <span> SaaS, mobile, and operational systems.</span>
           </h1>
           <p className="hero-text">
-            I design and ship full-stack products across web and mobile, with a strong bias
-            toward clean interfaces, practical backends, and iterations that make the product
-            feel more mature every week.
+            I am a software engineer focused on full-stack product delivery, mobile
+            applications, and business systems that need more than a good-looking surface. My
+            recent work spans ERP, MES, real-time dashboards, consumer mobile products, and
+            custom digital solutions for SMEs.
           </p>
           <div className="hero-actions">
             <a href="#selected-work" className="primary-link">
-              Selected work
+              View projects
             </a>
-            <a
-              href="https://github.com/mertpeyk"
-              className="secondary-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub profile
+            <a href="mailto:hakkimertpeyk@gmail.com" className="secondary-link">
+              Contact
             </a>
           </div>
         </div>
@@ -126,24 +177,24 @@ function App() {
         <div className="hero-card">
           <div className="hero-card-top">
             <span>Current focus</span>
-            <span>2026</span>
+            <span>Ankara / Remote</span>
           </div>
           <div className="signal-grid">
             <article>
-              <strong>Web</strong>
-              <p>React, Next.js, dashboards, CMS surfaces, and admin tooling</p>
+              <strong>Stack</strong>
+              <p>TypeScript, React, Next.js, FastAPI, Flutter, PostgreSQL, MySQL</p>
             </article>
             <article>
-              <strong>Mobile</strong>
-              <p>Flutter apps with production-minded onboarding, flows, and polish</p>
+              <strong>Domain</strong>
+              <p>ERP, MES, digital operations, mobile consumer products, and SaaS workflows</p>
             </article>
             <article>
-              <strong>Backend</strong>
-              <p>APIs, auth, relational data, catalog logic, and operational structure</p>
+              <strong>Background</strong>
+              <p>Software Engineering graduate, currently continuing a master&apos;s degree</p>
             </article>
             <article>
-              <strong>Approach</strong>
-              <p>Fast iterations, product taste, and code that stays readable later</p>
+              <strong>Style</strong>
+              <p>Fast-moving execution with strong product ownership and practical architecture</p>
             </article>
           </div>
         </div>
@@ -151,23 +202,23 @@ function App() {
 
       <section className="summary-band">
         <div>
-          <span className="summary-label">Work style</span>
-          <p>Product-minded full-stack execution</p>
+          <span className="summary-label">Now</span>
+          <p>Software Engineer at CodeThinx and MSc student in Software Engineering</p>
         </div>
         <div>
-          <span className="summary-label">Primary stack</span>
-          <p>React, Next.js, Flutter, Node.js, PostgreSQL</p>
+          <span className="summary-label">Focus</span>
+          <p>Business systems, mobile products, API design, and product-grade interfaces</p>
         </div>
         <div>
-          <span className="summary-label">Preferred output</span>
-          <p>Interfaces that feel premium and systems that stay usable</p>
+          <span className="summary-label">Based in</span>
+          <p>Ankara, Turkey</p>
         </div>
       </section>
 
       <section className="capabilities-section">
         <div className="section-heading">
           <p className="eyebrow">Capabilities</p>
-          <h2>From visual polish to backend wiring, I usually carry the whole product flow.</h2>
+          <h2>I work best where product direction, engineering depth, and execution speed meet.</h2>
         </div>
 
         <div className="capability-grid">
@@ -184,18 +235,35 @@ function App() {
         </div>
       </section>
 
+      <section className="timeline-section">
+        <div className="section-heading">
+          <p className="eyebrow">Experience</p>
+          <h2>Professional work shaped by product building, custom software, and operational thinking.</h2>
+        </div>
+        <div className="timeline-grid">
+          {experience.map((item) => (
+            <article className="timeline-card" key={`${item.company}-${item.period}`}>
+              <span className="timeline-period">{item.period}</span>
+              <h3>{item.role}</h3>
+              <p className="timeline-company">{item.company}</p>
+              <p className="timeline-summary">{item.summary}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="projects-section" id="selected-work">
         <div className="section-heading">
           <p className="eyebrow">Selected Work</p>
-          <h2>Recent projects shaped around real interfaces, real flows, and real constraints.</h2>
+          <h2>Projects that reflect both technical range and a bias toward real-world usefulness.</h2>
         </div>
 
         <div className="project-grid">
-          {projects.map((project) => (
+          {featuredProjects.map((project) => (
             <article className="project-card" key={project.title}>
               <div className="project-meta">
                 <span>{project.category}</span>
-                <span>{project.status}</span>
+                <span>{project.role}</span>
               </div>
               <h3>{project.title}</h3>
               <p className="project-summary">{project.summary}</p>
@@ -210,10 +278,26 @@ function App() {
         </div>
       </section>
 
+      <section className="education-section">
+        <div className="section-heading compact">
+          <p className="eyebrow">Education</p>
+          <h2>Academic track in software engineering with ongoing graduate-level work.</h2>
+        </div>
+        <div className="education-grid">
+          {education.map((item) => (
+            <article className="education-card" key={`${item.school}-${item.period}`}>
+              <span className="timeline-period">{item.period}</span>
+              <h3>{item.degree}</h3>
+              <p className="timeline-company">{item.school}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="principles-section">
         <div className="section-heading compact">
           <p className="eyebrow">Principles</p>
-          <h2>How I tend to work when the goal is quality, not just completion.</h2>
+          <h2>How I tend to work when the goal is long-term product value, not short-term flash.</h2>
         </div>
         <div className="principles-list">
           {principles.map((principle, index) => (
@@ -227,10 +311,11 @@ function App() {
 
       <section className="contact-section">
         <div>
-          <p className="eyebrow">Next</p>
-          <h2>Open to building serious digital products with strong taste and clean execution.</h2>
+          <p className="eyebrow">Contact</p>
+          <h2>Open to serious product, software, and systems work.</h2>
         </div>
         <div className="contact-links">
+          <a href="mailto:hakkimertpeyk@gmail.com">hakkimertpeyk@gmail.com</a>
           <a href="https://github.com/mertpeyk" target="_blank" rel="noreferrer">
             github.com/mertpeyk
           </a>

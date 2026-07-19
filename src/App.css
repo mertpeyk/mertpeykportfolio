@@ -7,7 +7,9 @@
 .hero-panel,
 .summary-band,
 .capabilities-section,
+.timeline-section,
 .projects-section,
+.education-section,
 .principles-section,
 .contact-section {
   position: relative;
@@ -193,7 +195,9 @@
 }
 
 .capabilities-section,
+.timeline-section,
 .projects-section,
+.education-section,
 .principles-section,
 .contact-section {
   margin-top: 22px;
@@ -219,6 +223,8 @@
 }
 
 .capability-grid,
+.timeline-grid,
+.education-grid,
 .project-grid {
   display: grid;
   gap: 16px;
@@ -228,7 +234,14 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.timeline-grid,
+.education-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .capability-card,
+.timeline-card,
+.education-card,
 .project-card,
 .principles-list article {
   border-radius: 24px;
@@ -241,6 +254,8 @@
 }
 
 .capability-card h3,
+.timeline-card h3,
+.education-card h3,
 .project-card h3 {
   margin: 0 0 14px;
   color: var(--heading);
@@ -279,8 +294,32 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.timeline-card,
+.education-card,
 .project-card {
   padding: 22px;
+}
+
+.timeline-period {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: var(--accent-strong);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.timeline-company {
+  margin: -4px 0 12px;
+  color: var(--heading);
+  font-size: 0.98rem;
+}
+
+.timeline-summary {
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.62;
 }
 
 .project-meta {
@@ -385,6 +424,8 @@
   .hero-panel,
   .contact-section,
   .capability-grid,
+  .timeline-grid,
+  .education-grid,
   .project-grid,
   .summary-band {
     grid-template-columns: 1fr;
