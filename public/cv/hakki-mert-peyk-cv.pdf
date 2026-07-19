@@ -1,87 +1,137 @@
 %PDF-1.4
-%‚„œ”
-1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
-2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
-3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 5 0 R /Resources << /Font << /F1 4 0 R >> >> >> endobj
-4 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
-5 0 obj << /Length 1480 >> stream
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 2998 >>
+stream
 BT
-/F1 12 Tf
-50 790 Td
+/F1 10 Tf
+42 800 Td
+13 TL
+/F1 16 Tf
 (Hakki Mert Peyk) Tj
-0 -16 Td
-(Yazilim Muhendisi) Tj
-0 -16 Td
+/F1 10 Tf
+T*
+(Yazilim Muhendisi | Ankara | hakkimertpeyk@gmail.com | github.com/mertpeyk) Tj
+T*
 () Tj
-0 -16 Td
-(Email: hakkimertpeyk@gmail.com) Tj
-0 -16 Td
-(GitHub: github.com/mertpeyk) Tj
-0 -16 Td
-(Konum: Ankara, Turkiye) Tj
-0 -16 Td
+T*
+(OZET) Tj
+T*
+(Full-stack urun gelistirme, mobil uygulamalar ve operasyonel is sistemleri) Tj
+T*
+(uzerine calisan bir yazilim muhendisiyim. ERP, MES, SaaS, mobil tuketici) Tj
+T*
+(urunleri, API tasarimi ve gercek zamanli panel yapilari uzerinde calisiyorum.) Tj
+T*
 () Tj
-0 -16 Td
-(Ozet) Tj
-0 -16 Td
-(Full-stack urun gelistirme, mobil uygulamalar ve operasyonel is sistemleri uzerine) Tj
-0 -16 Td
-(calisan bir yazilim muhendisiyim. ERP, MES, SaaS, mobil tuketici urunleri, API) Tj
-0 -16 Td
-(tasarimi ve gercek zamanli panel yapilari uzerinde calisiyorum.) Tj
-0 -16 Td
+T*
+(DENEYIM) Tj
+T*
+(CodeThinx | Software Engineer | Aralik 2024 - Devam ediyor) Tj
+T*
+(- Kurumsal firmalar icin web tabanli ozel yazilimlar, ERP ve operasyon panelleri.) Tj
+T*
+(Figen Egitim Kurumlari | Bilisim Uzmani | Nisan 2026 - Devam ediyor) Tj
+T*
+(- Kurumsal teknoloji operasyonlari ile urun/muhendislik islerini birlikte yurutuorum.) Tj
+T*
+(ADL Kurumsal Hizmetler | Software Engineer | Haziran 2024 - Kasim 2024) Tj
+T*
+(- Dijital urunler ve kurum ici cozumlerde frontend/backend teslimleri.) Tj
+T*
 () Tj
-0 -16 Td
-(Deneyim) Tj
-0 -16 Td
-(CodeThinx - Software Engineer \(Dec 2024 - Present\)) Tj
-0 -16 Td
-(Figen Egitim Kurumlari - Bilisim Uzmani \(Apr 2026 - Present\)) Tj
-0 -16 Td
-(ADL Kurumsal Hizmetler - Software Engineer \(Jun 2024 - Nov 2024\)) Tj
-0 -16 Td
+T*
+(PROJELER) Tj
+T*
+(CodeThinx ERP & MES | Kurucu & Lead Software Engineer) Tj
+T*
+(- Is emirleri, BOM, uretim rotalari, vardiya yonetimi ve canli makine izleme.) Tj
+T*
+(- Coklu para birimi destekli cari, stok, banka ve kasa surecleri.) Tj
+T*
+(AltinWeb | Kurucu & Full Stack Software Engineer) Tj
+T*
+(- Canli altin ve doviz verisi, SOAP/REST entegrasyonu, stok ve fiyat yonetimi.) Tj
+T*
+(Misil Bebek | Kurucu & Mobile Software Engineer) Tj
+T*
+(- Cok dilli mobil uyku uygulamasi, onboarding, release ve reklam optimizasyonu.) Tj
+T*
+(Sigarayi Birakiyoruz | Kurucu & Full Stack Mobile Developer) Tj
+T*
+(- Kriz ani destegi, motivasyon akislari, ilerleme takibi ve store uyumlulugu.) Tj
+T*
+(Kanserli Doku Tespiti | Arastirmaci & Yazilim Gelistirici) Tj
+T*
+(- TensorFlow ve VGG16/CNN ile gelistirilen, yaklasik %98 dogruluklu bitirme projesi.) Tj
+T*
+(AKKANA | Proje Lideri & Yazilim Muhendisi) Tj
+T*
+(- Sonarli insansiz deniz araci projesi, prototip asamasi ve Pitching Day ikinciligi.) Tj
+T*
+(ADL Dijital Cozumleri | Frontend & Backend Developer) Tj
+T*
+(- adlkurumsal.com.tr ve HRSync mimarisinde aktif gelistirme.) Tj
+T*
+(PB Yazilim Tasarim Projeleri | Full Stack Developer) Tj
+T*
+(- CHATRIKA UI/UX, teklok.com, pbyazilimtasarim.com, camavrupa.com teslimleri.) Tj
+T*
 () Tj
-0 -16 Td
-(Secili Projeler) Tj
-0 -16 Td
-(CodeThinx ERP & MES) Tj
-0 -16 Td
-(AltinWeb) Tj
-0 -16 Td
-(Misil Bebek) Tj
-0 -16 Td
-(Sigarayi Birakiyoruz) Tj
-0 -16 Td
-(AKKANA) Tj
-0 -16 Td
-(Cancer Tissue Detection from MR Images) Tj
-0 -16 Td
+T*
+(EGITIM) Tj
+T*
+(OSTIM Teknik Universitesi | Yuksek Lisans, Yazilim Muhendisligi | Ekim 2025 - Devam ediyor) Tj
+T*
+(OSTIM Teknik Universitesi | Lisans, Yazilim Muhendisligi | Ekim 2020 - Haziran 2024) Tj
+T*
 () Tj
-0 -16 Td
-(Teknolojiler) Tj
-0 -16 Td
+T*
+(TEKNOLOJILER) Tj
+T*
 (React, Next.js, TypeScript, JavaScript, Flutter, Dart, FastAPI, Node.js, Python,) Tj
-0 -16 Td
-(REST, SOAP, JWT, MySQL, PostgreSQL, T-SQL, Docker, RBAC, OOP, Design Patterns.) Tj
-0 -16 Td
+T*
+(REST API, SOAP, JWT, MySQL, PostgreSQL, T-SQL, Docker, RBAC, OOP, Design Patterns.) Tj
+T*
 () Tj
-0 -16 Td
-(Egitim) Tj
-0 -16 Td
-(Ostim Teknik Universitesi - Yuksek Lisans, Yazilim Muhendisligi \(Oct 2025 - Present\)) Tj
-0 -16 Td
-(Ostim Teknik Universitesi - Lisans, Yazilim Muhendisligi \(Oct 2020 - Jun 2024\)) Tj
+T*
+(STAJLAR) Tj
+T*
+(YD Yazilim ve Teknoloji | Mart 2022 - Nisan 2022) Tj
+T*
+(Manas Enerji Yonetimi | Haziran 2022 - Temmuz 2022) Tj
+T*
+(Siber Koza | Ocak 2023 - Subat 2023) Tj
+T*
+(ArkSigner | Agustos 2023 - Eylul 2023) Tj
+T*
+(OSTIM Endustriyel Yatirim ve Isletme A.S. | Ocak 2024 - Subat 2024) Tj
+T*
+(AKYA Dijital Donusum A.S. | Subat 2024 - Haziran 2024) Tj
 ET
-endstream endobj
+endstream
+endobj
 xref
 0 6
 0000000000 65535 f 
-0000000015 00000 n 
-0000000064 00000 n 
-0000000121 00000 n 
-0000000247 00000 n 
-0000000317 00000 n 
-trailer << /Size 6 /Root 1 0 R >>
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
 startxref
-1849
+3361
 %%EOF
