@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react'
 import profilePhoto from './assets/hakki-mert-peyk.jpg'
+import altinwebGram from './assets/projects/altinweb-gram.png'
+import codethinxLogo from './assets/projects/codethinx-logo.png'
+import misilBebekIcon from './assets/projects/misil-bebek-icon.png'
+import pbYazilimOffice from './assets/projects/pb-yazilim-office.png'
 import './App.css'
 
 type Locale = 'tr' | 'en'
@@ -39,6 +43,12 @@ type ProjectDetailGroup = {
   items: LocalizedText[]
 }
 
+type ProjectMedia = {
+  src: string
+  alt: LocalizedText
+  fit?: 'cover' | 'contain'
+}
+
 type Project = {
   slug: string
   title: string
@@ -50,6 +60,7 @@ type Project = {
   metrics: ProjectMetric[]
   detailGroups: ProjectDetailGroup[]
   stack: string[]
+  media?: ProjectMedia[]
   visual: string
   accent: string
 }
@@ -108,6 +119,7 @@ const uiCopy = {
     detailRole: 'Rol',
     detailCategory: 'Kategori',
     detailStatus: 'Kapsam',
+    detailMedia: 'Proje görselleri',
   },
   en: {
     eyebrow: 'HAKKI MERT PEYK • SOFTWARE ENGINEER',
@@ -160,6 +172,7 @@ const uiCopy = {
     detailRole: 'Role',
     detailCategory: 'Category',
     detailStatus: 'Scope',
+    detailMedia: 'Project media',
   },
 } as const
 
@@ -312,6 +325,16 @@ const featuredProjects: Project[] = [
       },
     ],
     stack: ['Next.js', 'React', 'TypeScript', 'FastAPI', 'MySQL', 'JWT', 'RBAC'],
+    media: [
+      {
+        src: codethinxLogo,
+        alt: {
+          tr: 'CodeThinx reposundan alınan marka görseli',
+          en: 'Brand asset pulled from the CodeThinx repository',
+        },
+        fit: 'contain',
+      },
+    ],
     visual: 'ERP / MES',
     accent: 'amber',
   },
@@ -396,6 +419,16 @@ const featuredProjects: Project[] = [
       },
     ],
     stack: ['Next.js', 'React', 'FastAPI', 'Python', 'MySQL', 'SOAP/REST API', 'JWT', 'Vercel'],
+    media: [
+      {
+        src: altinwebGram,
+        alt: {
+          tr: 'AltinWeb ile ilişkili kuyumculuk ürün görseli',
+          en: 'Jewelry product image tied to the AltinWeb ecosystem',
+        },
+        fit: 'contain',
+      },
+    ],
     visual: 'LIVE PRICING',
     accent: 'blue',
   },
@@ -480,6 +513,16 @@ const featuredProjects: Project[] = [
       },
     ],
     stack: ['Flutter', 'Dart', 'Firebase Analytics', 'Google AdMob', 'App Store Connect', 'Google Play Console'],
+    media: [
+      {
+        src: misilBebekIcon,
+        alt: {
+          tr: 'Mışıl Bebek reposundan alınan uygulama ikonu',
+          en: 'Application icon pulled from the Misil Bebek repository',
+        },
+        fit: 'contain',
+      },
+    ],
     visual: 'SLEEP AUDIO',
     accent: 'mint',
   },
@@ -884,6 +927,16 @@ const featuredProjects: Project[] = [
       },
     ],
     stack: ['UI/UX', 'Frontend', 'Backend', 'Corporate Websites'],
+    media: [
+      {
+        src: pbYazilimOffice,
+        alt: {
+          tr: 'PB Yazılım Tasarım reposundan alınan kurumsal görsel',
+          en: 'Corporate image pulled from the PB Yazilim Tasarim repository',
+        },
+        fit: 'cover',
+      },
+    ],
     visual: 'MULTI BRAND',
     accent: 'amber',
   },
@@ -1063,6 +1116,27 @@ function App() {
               ))}
             </div>
           </section>
+
+          {activeProject.media?.length ? (
+            <section className="detail-media-card">
+              <div className="section-heading compact">
+                <p className="eyebrow">{copy.detailMedia}</p>
+                <h2>{activeProject.title}</h2>
+              </div>
+
+              <div className="detail-media-grid">
+                {activeProject.media.map((item) => (
+                  <figure className="detail-media-item" key={`${activeProject.slug}-${item.src}`}>
+                    <img
+                      src={item.src}
+                      alt={item.alt[locale]}
+                      className={item.fit === 'contain' ? 'detail-media-image is-contain' : 'detail-media-image'}
+                    />
+                  </figure>
+                ))}
+              </div>
+            </section>
+          ) : null}
 
           <section className="detail-content-grid">
             {activeProject.detailGroups.map((group) => (
@@ -1255,7 +1329,14 @@ function App() {
         <div className="project-grid">
           {featuredProjects.map((project) => (
             <button type="button" className="project-card project-card-button" key={project.slug} onClick={() => openProject(project.slug)}>
-              <div className={`project-visual accent-${project.accent}`}>
+              <div className={`project-visual accent-${project.accent}${project.media?.length ? ' has-image' : ''}`}>
+                {project.media?.[0] ? (
+                  <img
+                    src={project.media[0].src}
+                    alt={project.media[0].alt[locale]}
+                    className={project.media[0].fit === 'contain' ? 'project-visual-image is-contain' : 'project-visual-image'}
+                  />
+                ) : null}
                 <span className="project-visual-code">{project.visual}</span>
                 <strong>{project.title}</strong>
                 <p>{project.category[locale]}</p>
