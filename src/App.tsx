@@ -41,45 +41,47 @@ type SkillLane = {
 
 const uiCopy = {
   tr: {
-    eyebrow: 'HAKKI MERT PEYK • YAZILIM MUHENDISI',
+    eyebrow: 'HAKKI MERT PEYK • YAZILIM MÜHENDİSİ',
     heroTitleLead: 'SaaS, mobil ve operasyonel sistemler',
-    heroTitleTail: ' uzerine urun ve yazilim gelistiriyorum.',
+    heroTitleTail: ' üzerine ürün ve yazılım geliştiriyorum.',
     heroText:
-      'Full-stack urun gelistirme, mobil uygulamalar ve is sistemleri tarafinda calisiyorum. Son donem islerim ERP, MES, gercek zamanli paneller, tuketici mobil uygulamalari ve KOBI odakli dijital cozumler etrafinda sekilleniyor.',
-    viewProjects: 'Projeleri Gor',
-    downloadCv: 'CV Indir',
-    contact: 'Iletisim',
-    currentFocus: 'Guncel odak',
+      'Full-stack ürün geliştirme, mobil uygulamalar ve iş sistemleri tarafında çalışıyorum. Son dönem işlerim ERP, MES, gerçek zamanlı paneller, tüketici mobil uygulamaları ve KOBİ odaklı dijital çözümler etrafında şekilleniyor.',
+    viewProjects: 'Projeleri Gör',
+    downloadCv: 'CV İndir',
+    contact: 'İletişim',
+    currentFocus: 'Güncel odak',
     stack: 'Stack',
     domain: 'Alan',
     background: 'Arka plan',
     style: 'Tarz',
-    focusLine: 'SaaS, MES, dijital operasyonlar, mobil tuketici urunleri ve is akis odakli sistemler',
-    backgroundLine: 'Yazilim Muhendisligi mezunu, su an yuksek lisansa devam ediyor',
-    styleLine: 'Hizli teslim, guclu sahiplik ve pratik mimari kararlar',
-    now: 'Bugun',
+    focusLine: 'SaaS, MES, dijital operasyonlar, mobil tüketici ürünleri ve iş akışı odaklı sistemler',
+    backgroundLine: 'Yazılım Mühendisliği mezunu, şu an yüksek lisansa devam ediyor',
+    styleLine: 'Hızlı teslim, güçlü sahiplik ve pratik mimari kararlar',
+    now: 'Bugün',
     focus: 'Odak',
     based: 'Konum',
-    nowLine: 'CodeThinx tarafinda Software Engineer ve Yazilim Muhendisligi yuksek lisans ogrencisi',
-    focusLine2: 'Is sistemleri, mobil urunler, API tasarimi ve urun kalitesinde arayuzler',
-    basedLine: 'Ankara, Turkiye',
+    nowLine: 'CodeThinx tarafında Software Engineer ve Yazılım Mühendisliği yüksek lisans öğrencisi',
+    focusLine2: 'İş sistemleri, mobil ürünler, API tasarımı ve ürün kalitesinde arayüzler',
+    basedLine: 'Ankara, Türkiye',
     capabilities: 'Yetkinlikler',
-    capabilitiesTitle: 'Urun yonu, muhendislik derinligi ve hizli teslimin kesistigi yerde daha iyi is cikartiyorum.',
+    capabilitiesTitle: 'Ürün yönü, mühendislik derinliği ve hızlı teslimin kesiştiği yerde daha iyi iş çıkartıyorum.',
     experience: 'Deneyim',
-    experienceTitle: 'Profesyonel tarafim urun gelistirme, ozel yazilim ve operasyonel dusunce etrafinda sekillendi.',
-    selectedWork: 'Secili Projeler',
-    selectedWorkTitle: 'Teknik araligi ve gercek dunyadaki faydayi ayni anda gosteren projeler.',
-    techStack: 'Kullandigim Teknolojiler',
-    techStackTitle: 'Frontend, backend, mobil ve teslim tarafinda aktif kullandigim araclar.',
-    education: 'Egitim',
-    educationTitle: 'Yazilim muhendisligi ekseninde ilerleyen akademik yolculuk.',
-    principles: 'Calisma Bicimi',
-    principlesTitle: 'Kisa sureli gosteristen ziyade uzun vadeli urun degeri hedefledigimde nasil calisiyorum.',
-    contactTitle: 'Ciddi urun, yazilim ve sistem islerine acigim.',
+    experienceTitle: 'Profesyonel tarafım ürün geliştirme, özel yazılım ve operasyonel düşünce etrafında şekillendi.',
+    selectedWork: 'Seçili Projeler',
+    selectedWorkTitle: 'Teknik aralığı ve gerçek dünyadaki faydayı aynı anda gösteren projeler.',
+    techStack: 'Kullandığım Teknolojiler',
+    techStackTitle: 'Frontend, backend, mobil ve teslim tarafında aktif kullandığım araçlar.',
+    education: 'Eğitim',
+    educationTitle: 'Yazılım mühendisliği ekseninde ilerleyen akademik yolculuk.',
+    principles: 'Çalışma Biçimi',
+    principlesTitle: 'Kısa süreli gösterişten ziyade uzun vadeli ürün değeri hedeflediğimde nasıl çalışıyorum.',
+    contactTitle: 'Ciddi ürün, yazılım ve sistem işlerine açığım.',
     portfolioRepo: 'Portfolio Reposu',
-    liveSite: 'Canli Site',
+    liveSite: 'Canlı Site',
     toggleTr: 'TR',
     toggleEn: 'EN',
+    photoNote: 'Profil fotoğrafı alanı hazır',
+    photoHint: 'Gerçek fotoğrafını gönder, bunu doğrudan portreyle değiştireyim.',
   },
   en: {
     eyebrow: 'HAKKI MERT PEYK • SOFTWARE ENGINEER',
@@ -121,6 +123,8 @@ const uiCopy = {
     liveSite: 'Live Site',
     toggleTr: 'TR',
     toggleEn: 'EN',
+    photoNote: 'Profile photo slot is ready',
+    photoHint: 'Send me your actual photo and I will replace this area with a real portrait.',
   },
 } as const
 
@@ -134,14 +138,14 @@ const capabilityGroups: CapabilityGroup[] = [
   },
   {
     title: {
-      tr: 'Mobil Urunler',
+      tr: 'Mobil Ürünler',
       en: 'Mobile Products',
     },
     items: ['Flutter for iOS and Android', 'Release workflows and store readiness', 'Analytics, monetization, and product iteration'],
   },
   {
     title: {
-      tr: 'Sistem Dusuncesi',
+      tr: 'Sistem Düşüncesi',
       en: 'Systems Thinking',
     },
     items: ['ERP and MES product design', 'RBAC, JWT, multi-tenant structures', 'Agile delivery and practical architecture'],
@@ -157,19 +161,19 @@ const experience: Experience[] = [
     },
     period: 'Dec 2024 - Present',
     summary: {
-      tr: 'KOBI\'ler icin ozel yazilimlar, ERP odakli sistemler, operasyon panelleri ve dijital donusum urunleri gelistiriyorum.',
+      tr: 'KOBİ\'ler için özel yazılımlar, ERP odaklı sistemler, operasyon panelleri ve dijital dönüşüm ürünleri geliştiriyorum.',
       en: 'Building custom business software, ERP-oriented systems, operational dashboards, and digital transformation products for SMEs.',
     },
   },
   {
     company: 'Figen Egitim Kurumlari',
     role: {
-      tr: 'Bilisim Uzmani',
+      tr: 'Bilişim Uzmanı',
       en: 'IT Specialist',
     },
     period: 'Apr 2026 - Present',
     summary: {
-      tr: 'Kurumsal teknoloji operasyonlarini desteklerken ayni zamanda urun ve muhendislik islerini surduruyorum.',
+      tr: 'Kurumsal teknoloji operasyonlarını desteklerken aynı zamanda ürün ve mühendislik işlerini sürdürüyorum.',
       en: 'Supporting institutional technology operations while continuing product and engineering work in parallel.',
     },
   },
@@ -181,7 +185,7 @@ const experience: Experience[] = [
     },
     period: 'Jun 2024 - Nov 2024',
     summary: {
-      tr: 'Dijital urunler ve ic is cozumleri icin hem frontend hem backend teslimlerinde gorev aldim.',
+      tr: 'Dijital ürünler ve iç iş çözümleri için hem frontend hem backend teslimlerinde görev aldım.',
       en: 'Worked across frontend and backend delivery for digital products and internal business solutions.',
     },
   },
@@ -191,7 +195,7 @@ const featuredProjects: Project[] = [
   {
     title: 'CodeThinx ERP & MES',
     category: {
-      tr: 'Endustriyel SaaS Platformu',
+      tr: 'Endüstriyel SaaS Platformu',
       en: 'Industrial SaaS Platform',
     },
     role: {
@@ -199,11 +203,11 @@ const featuredProjects: Project[] = [
       en: 'Founder & Lead Software Engineer',
     },
     summary: {
-      tr: 'Finans, operasyon, uretim planlama, makine izleme ve vardiya yonetimini tek cati altinda toplayan olceklenebilir bir platform.',
+      tr: 'Finans, operasyon, üretim planlama, makine izleme ve vardiya yönetimini tek çatı altında toplayan ölçeklenebilir bir platform.',
       en: 'A scalable platform for finance, operations, production planning, machine monitoring, and shift management.',
     },
     impact: {
-      tr: 'Multi-tenant yapi, rol bazli yetkilendirme, gercek zamanli izleme ve uretim operasyonlari icin gorunurluk odakli kurgulandi.',
+      tr: 'Multi-tenant yapı, rol bazlı yetkilendirme, gerçek zamanlı izleme ve üretim operasyonları için görünürlük odaklı kurgulandı.',
       en: 'Designed around multi-tenant thinking, role-based access, real-time monitoring, and operational visibility for production environments.',
     },
     stack: ['Next.js', 'React', 'TypeScript', 'FastAPI', 'MySQL'],
@@ -221,11 +225,11 @@ const featuredProjects: Project[] = [
       en: 'Founder & Full Stack Engineer',
     },
     summary: {
-      tr: 'Kuyumculuk sektoru icin gelistirilmis, canli altin ve doviz yonetimini operasyon modulleriyle birlestiren bir platform.',
+      tr: 'Kuyumculuk sektörü için geliştirilmiş, canlı altın ve döviz yönetimini operasyon modülleriyle birleştiren bir platform.',
       en: 'Live gold and exchange management platform tailored for the jewelry sector with operational modules and screen-based experiences.',
     },
     impact: {
-      tr: 'SOAP ve REST veri akislari, stok mantigi, akilli fiyatlama ve admin kontrol yuzleriyle yuksek frekansli operasyonlara gore kuruldu.',
+      tr: 'SOAP ve REST veri akışları, stok mantığı, akıllı fiyatlama ve admin kontrol yüzleriyle yüksek frekanslı operasyonlara göre kuruldu.',
       en: 'Connected SOAP and REST market feeds with high-frequency price workflows, stock logic, smart pricing, and admin control surfaces.',
     },
     stack: ['Next.js', 'React', 'FastAPI', 'Python', 'MySQL', 'SOAP/REST'],
@@ -235,7 +239,7 @@ const featuredProjects: Project[] = [
   {
     title: 'Misil Bebek',
     category: {
-      tr: 'Mobil Tuketici Uygulamasi',
+      tr: 'Mobil Tüketici Uygulaması',
       en: 'Consumer Mobile App',
     },
     role: {
@@ -243,11 +247,11 @@ const featuredProjects: Project[] = [
       en: 'Founder & Mobile Engineer',
     },
     summary: {
-      tr: 'Beyaz gurultu, ninni ve cok dilli deneyimle ebeveynlerin uyku rutinini kolaylastiran tuketici odakli mobil uygulama.',
+      tr: 'Beyaz gürültü, ninni ve çok dilli deneyimle ebeveynlerin uyku rutinini kolaylaştıran tüketici odaklı mobil uygulama.',
       en: 'A consumer mobile app designed to make sleep routines easier for parents through white noise, lullabies, and a calmer multilingual product experience.',
     },
     impact: {
-      tr: 'Uygulama ici dil degistirme, lokalize store icerikleri, onboarding akisi, release surecleri ve reklam dengesini urun hissini bozmadan yonettim.',
+      tr: 'Uygulama içi dil değiştirme, lokalize store içerikleri, onboarding akışı, release süreçleri ve reklam dengesini ürün hissini bozmadan yönettim.',
       en: 'Handled multilingual UX, in-app language switching, localized app metadata, onboarding polish, release operations, and monetization tuning without making the product feel spammy.',
     },
     stack: ['Flutter', 'Dart', 'Firebase Analytics', 'Google AdMob', 'App Store Connect', 'Google Play'],
@@ -257,7 +261,7 @@ const featuredProjects: Project[] = [
   {
     title: 'Sigarayi Birakiyoruz',
     category: {
-      tr: 'Davranis Degisimi Urunu',
+      tr: 'Davranış Değişimi Ürünü',
       en: 'Behavior Change Product',
     },
     role: {
@@ -265,11 +269,11 @@ const featuredProjects: Project[] = [
       en: 'Founder & Full Stack Mobile Developer',
     },
     summary: {
-      tr: 'Motivasyon, kriz ani destegi, ilerleme takibi ve aliskanlik pekistirme akislariyla sigarayi birakma surecine odaklanan mobil urun.',
+      tr: 'Motivasyon, kriz anı desteği, ilerleme takibi ve alışkanlık pekiştirme akışlarıyla sigarayı bırakma sürecine odaklanan mobil ürün.',
       en: 'A behavior-change mobile product built to support smoking cessation through motivation, crisis support, progress tracking, and habit reinforcement.',
     },
     impact: {
-      tr: 'Onboarding kalitesi, kriz ani ekranlari, motive edici icerikler, cok dilli metinler, store policy uyumlu saglik icerigi ve iOS/Android stabilite iyilestirmeleri uzerinde calistim.',
+      tr: 'Onboarding kalitesi, kriz anı ekranları, motive edici içerikler, çok dilli metinler, store policy uyumlu sağlık içeriği ve iOS/Android stabilite iyileştirmeleri üzerinde çalıştım.',
       en: 'Focused on onboarding quality, crisis moments, motivational content, multilingual copy, store-policy compliant health messaging, and stability improvements across iOS and Android releases.',
     },
     stack: ['Flutter', 'Dart', 'Firebase', 'Google AdMob', 'App Store Connect', 'Google Play'],
@@ -279,19 +283,19 @@ const featuredProjects: Project[] = [
   {
     title: 'AKKANA',
     category: {
-      tr: 'Otonom Deniz Araci',
+      tr: 'Otonom Deniz Aracı',
       en: 'Autonomous Marine Project',
     },
     role: {
-      tr: 'Proje Lideri & Yazilim Muhendisi',
+      tr: 'Proje Lideri & Yazılım Mühendisi',
       en: 'Project Lead & Software Engineer',
     },
     summary: {
-      tr: 'Universite ve kulucka destegiyle prototip asamasina gelen sonar tabanli insansiz deniz araci projesi.',
+      tr: 'Üniversite ve kuluçka desteğiyle prototip aşamasına gelen sonar tabanlı insansız deniz aracı projesi.',
       en: 'Sonar-based unmanned marine vehicle project developed through university and incubation support.',
     },
     impact: {
-      tr: 'Takim liderligi altinda prototip asamasina tasindi ve Ostim Teknik Universitesi Pitching Day\'de ikinci oldu.',
+      tr: 'Takım liderliği altında prototip aşamasına taşındı ve Ostim Teknik Üniversitesi Pitching Day\'de ikinci oldu.',
       en: 'Reached prototype phase under team leadership and earned second place at Ostim Technical University Pitching Day.',
     },
     stack: ['Product Leadership', 'Embedded Collaboration', 'Prototyping'],
@@ -301,19 +305,19 @@ const featuredProjects: Project[] = [
   {
     title: 'Cancer Tissue Detection from MR Images',
     category: {
-      tr: 'Bitirme Arastirma Projesi',
+      tr: 'Bitirme Araştırma Projesi',
       en: 'Graduation Research Project',
     },
     role: {
-      tr: 'Arastirmaci & Yazilim Gelistirici',
+      tr: 'Araştırmacı & Yazılım Geliştirici',
       en: 'Researcher & Software Developer',
     },
     summary: {
-      tr: 'MR goruntulerinden kanserli doku tespitine odaklanan derin ogrenme tabanli tibbi goruntuleme calismasi.',
+      tr: 'MR görüntülerinden kanserli doku tespitine odaklanan derin öğrenme tabanlı tıbbi görüntüleme çalışması.',
       en: 'Deep learning-based medical imaging project focused on cancerous tissue detection from MR scans.',
     },
     impact: {
-      tr: 'TensorFlow ve CNN tabanli yaklasimlarla akademik baglamda yuksek dogruluk hedeflenerek gelistirildi.',
+      tr: 'TensorFlow ve CNN tabanlı yaklaşımlarla akademik bağlamda yüksek doğruluk hedeflenerek geliştirildi.',
       en: 'Built with TensorFlow and CNN-based methods, targeting high diagnostic accuracy in an academic context.',
     },
     stack: ['Python', 'TensorFlow', 'Computer Vision', 'CNN'],
@@ -326,7 +330,7 @@ const education: Education[] = [
   {
     school: 'Ostim Teknik Universitesi',
     degree: {
-      tr: 'Yuksek Lisans, Yazilim Muhendisligi',
+      tr: 'Yüksek Lisans, Yazılım Mühendisliği',
       en: 'MSc in Software Engineering',
     },
     period: 'Oct 2025 - Present',
@@ -334,7 +338,7 @@ const education: Education[] = [
   {
     school: 'Ostim Teknik Universitesi',
     degree: {
-      tr: 'Lisans, Yazilim Muhendisligi',
+      tr: 'Lisans, Yazılım Mühendisliği',
       en: 'BSc in Software Engineering',
     },
     period: 'Oct 2020 - Jun 2024',
@@ -367,15 +371,15 @@ const skillLanes: SkillLane[] = [
 
 const principles: LocalizedText[] = [
   {
-    tr: 'Sadece guzel arayuz degil, operasyonel problemi cozen urunleri seviyorum.',
+    tr: 'Sadece güzel arayüz değil, operasyonel problemi çözen ürünleri seviyorum.',
     en: 'I like products that solve operational problems, not just interface exercises.',
   },
   {
-    tr: 'Urun dusuncesi, arayuz kalitesi ve backend yapisi arasinda kopmadan ilerlemeyi seviyorum.',
+    tr: 'Ürün düşüncesi, arayüz kalitesi ve backend yapısı arasında kopmadan ilerlemeyi seviyorum.',
     en: 'I enjoy moving between product thinking, interface quality, and backend structure without breaking continuity.',
   },
   {
-    tr: 'Sistem buyudukce okunabilir kalmali; isimlendirme, sinirlar ve teslim disiplini bence kritik.',
+    tr: 'Sistem büyüdükçe okunabilir kalmalı; isimlendirme, sınırlar ve teslim disiplini bence kritik.',
     en: 'I prefer systems that stay readable as they grow; naming, boundaries, and delivery discipline matter.',
   },
 ]
@@ -425,6 +429,15 @@ function App() {
         </div>
 
         <div className="hero-card">
+          <div className="portrait-shell">
+            <div className="portrait-ring">
+              <div className="portrait-fallback">MP</div>
+            </div>
+            <div className="portrait-copy">
+              <strong>{copy.photoNote}</strong>
+              <p>{copy.photoHint}</p>
+            </div>
+          </div>
           <div className="hero-card-top">
             <span>{copy.currentFocus}</span>
             <span>Ankara / Remote</span>
