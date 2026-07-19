@@ -9,6 +9,7 @@
 .capabilities-section,
 .timeline-section,
 .projects-section,
+.skills-section,
 .education-section,
 .principles-section,
 .contact-section {
@@ -225,6 +226,7 @@
 .capability-grid,
 .timeline-grid,
 .education-grid,
+.skills-grid,
 .project-grid {
   display: grid;
   gap: 16px;
@@ -235,13 +237,15 @@
 }
 
 .timeline-grid,
-.education-grid {
+.education-grid,
+.skills-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .capability-card,
 .timeline-card,
 .education-card,
+.skills-card,
 .project-card,
 .principles-list article {
   border-radius: 24px;
@@ -256,6 +260,7 @@
 .capability-card h3,
 .timeline-card h3,
 .education-card h3,
+.skills-card h3,
 .project-card h3 {
   margin: 0 0 14px;
   color: var(--heading);
@@ -296,6 +301,7 @@
 
 .timeline-card,
 .education-card,
+.skills-card,
 .project-card {
   padding: 22px;
 }
@@ -426,6 +432,7 @@
   .capability-grid,
   .timeline-grid,
   .education-grid,
+  .skills-grid,
   .project-grid,
   .summary-band {
     grid-template-columns: 1fr;

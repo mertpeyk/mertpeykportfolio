@@ -27,6 +27,11 @@ type Education = {
   period: string
 }
 
+type SkillLane = {
+  title: string
+  items: string[]
+}
+
 const capabilityGroups: CapabilityGroup[] = [
   {
     title: 'Full Stack Delivery',
@@ -92,20 +97,20 @@ const featuredProjects: Project[] = [
     category: 'Consumer Mobile App',
     role: 'Founder & Mobile Engineer',
     summary:
-      'Sleep support app for parents with white noise, lullabies, multilingual UX, and production release management.',
+      'A consumer mobile app designed to make sleep routines easier for parents through white noise, lullabies, and a calmer multilingual product experience.',
     impact:
-      'Handled multilingual product flow, monetization tuning, ASO thinking, and release operations for a consumer-facing app.',
-    stack: ['Flutter', 'Dart', 'Firebase Analytics', 'AdMob'],
+      'Handled multilingual UX, in-app language switching, localized app metadata, onboarding polish, release operations, and monetization tuning without making the product feel spammy.',
+    stack: ['Flutter', 'Dart', 'Firebase Analytics', 'Google AdMob', 'App Store Connect', 'Google Play'],
   },
   {
     title: 'Sigarayi Birakiyoruz',
     category: 'Behavior Change Product',
     role: 'Founder & Full Stack Mobile Developer',
     summary:
-      'A mobile experience built to support smoking cessation with motivation, crisis support, and progress tracking flows.',
+      'A behavior-change mobile product built to support smoking cessation through motivation, crisis support, progress tracking, and habit reinforcement.',
     impact:
-      'Focused on product stability, store compliance, multilingual content, and a user journey shaped around repeat engagement.',
-    stack: ['Flutter', 'Dart', 'Firebase', 'AdMob'],
+      'Focused on onboarding quality, crisis moments, motivational content, multilingual copy, store-policy compliant health messaging, and stability improvements across iOS and Android releases.',
+    stack: ['Flutter', 'Dart', 'Firebase', 'Google AdMob', 'App Store Connect', 'Google Play'],
   },
   {
     title: 'AKKANA',
@@ -139,6 +144,21 @@ const education: Education[] = [
     school: 'Ostim Teknik Universitesi',
     degree: 'BSc in Software Engineering',
     period: 'Oct 2020 — Jun 2024',
+  },
+]
+
+const skillLanes: SkillLane[] = [
+  {
+    title: 'Frontend & Mobile',
+    items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Flutter', 'Dart', 'HTML5', 'CSS3', 'Tailwind'],
+  },
+  {
+    title: 'Backend & Data',
+    items: ['FastAPI', 'Node.js', 'Python', 'REST APIs', 'SOAP', 'JWT', 'MySQL', 'PostgreSQL', 'T-SQL'],
+  },
+  {
+    title: 'Architecture & Delivery',
+    items: ['OOP', 'Design Patterns', 'Dependency Injection', 'Agile', 'Scrum', 'SDLC', 'Docker', 'RBAC'],
   },
 ]
 
@@ -270,6 +290,25 @@ function App() {
               <p className="project-impact">{project.impact}</p>
               <div className="tag-row">
                 {project.stack.map((item) => (
+                  <span key={item}>{item}</span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="skills-section">
+        <div className="section-heading compact">
+          <p className="eyebrow">Tech Stack</p>
+          <h2>Technologies I actively use across frontend, backend, mobile, and delivery work.</h2>
+        </div>
+        <div className="skills-grid">
+          {skillLanes.map((lane) => (
+            <article className="skills-card" key={lane.title}>
+              <h3>{lane.title}</h3>
+              <div className="tag-row">
+                {lane.items.map((item) => (
                   <span key={item}>{item}</span>
                 ))}
               </div>
